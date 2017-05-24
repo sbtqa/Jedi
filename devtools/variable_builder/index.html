@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/toolpanel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/content.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/helper.js"></script>
+    <script type="text/javascript" src="js/procedural-ui.js"></script>
+    <script type="text/javascript" src="js/on-load.js"></script>
+</head>
+<body style="margin: 0; min-height: 200px; min-width: 200px">
+<div class="tool-panel">
+    <img id="back-button" src="img/left-arrow.png" align="left"/>
+    <img id="next-button" src="img/right-arrow.png" align="right"/>
+    <img id="apply-button" src="img/apply.png" align="right"/>
+    <img id="cancel-button" src="img/cancel.png" align="right"/>
+</div>
+<div class="content">
+    <p id="table-message" style="margin: 20px" align="center">Выберите элемент со страницы используя Ctrl + Shift + C
+        или выберите элемент из DOM-дерева.</p>
+    <div id="xpath-table" class="xpath-table"></div>
+    <p id="variables-message" style="margin: 20px; display: none" align="center">Загрузите шаблон, и выберите элемент
+        снова.</p>
+    <div id="variables-block" class="variables" style="display: none">
+        <input type="text" placeholder="Your name..">
+        <input type="submit">
+        <select>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <input type="text" placeholder="Your name..">
+        <select>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+    </div>
+</div>
+</body>
+</html>

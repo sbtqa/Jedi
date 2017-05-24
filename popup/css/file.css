@@ -1,0 +1,42 @@
+.button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background: #7ec247;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+    box-shadow: inset 0 0 40px #429439;
+    border: 2px solid #00703e;
+}
+
+.button input {
+    position: absolute;
+    top: 0; right: 0;
+    font-size: 200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.button:hover  {
+    box-shadow: none;
+}
+
+.left-rounded-corners {
+    margin-right: -2px;
+    border-right: 1px solid #d6e13d;
+    border-bottom-left-radius: 2em;
+    border-top-left-radius: 2em;
+}
+
+.right-rounded-corners {
+    margin-left: -2px;
+    border-left: 1px solid #d6e13d;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+}
