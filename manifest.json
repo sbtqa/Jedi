@@ -1,0 +1,71 @@
+{
+  "manifest_version": 2,
+  "minimum_chrome_version": "37.0.0",
+  "name": "Jedi QA",
+  "short_name": "JQA",
+  "version": "0.1",
+  "author": "cyberspace",
+  "description": "...",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "background",
+    "storage"
+  ],
+  "devtools_page": "devtools.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
+      "js": [
+        "scripts/jquery-3.2.1.slim.js",
+        "scripts/core/Bootstrapper.js",
+        "scripts/core/XEngine/Helper.js",
+        "scripts/core/XEngine/XFunction.js",
+        "scripts/core/XEngine/XParam.js",
+        "scripts/core/XEngine/XApproach.js",
+        "scripts/core/XEngine/XApproaches.js",
+        "scripts/core/XEngine/XStrategy.js",
+        "scripts/core/XEngine/XSet.js",
+        "scripts/core/XEngine/XExpression.js",
+        "scripts/core/XEngine/XObject.js",
+        "scripts/core/XEngine/XRoute.js",
+        "scripts/core/XEngine/XProperties.js",
+        "scripts/core/XEngine/XValidator.js",
+        "scripts/core/CommonFunction.js",
+        "scripts/core/CodeGenerator.js",
+        "scripts/core/Properties.js",
+        "scripts/core/Data.js",
+        "scripts/core/EventsSystem.Action.js",
+        "scripts/core/EventsSystem.Declarations.js",
+        "scripts/core/EventsSystem.js",
+        "scripts/core/OnLoad.js"
+      ],
+      "all_frames": false
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "icons/16x16.png",
+    "32": "icons/32x32.png",
+    "48": "icons/48x48.png",
+    "64": "icons/64x64.png",
+    "128": "icons/128x128.png"
+  },
+
+  "browser_action": {
+    "default_title": "Jedi QA",
+    "default_icon": "icons/48x48.png",
+    "default_popup": "popup/index.html"
+  }
+}
