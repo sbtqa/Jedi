@@ -1,0 +1,24 @@
+.textbox {
+    outline:none;
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 5px;
+    border: 2px solid #00703e;
+    background: #7ec247;
+    box-shadow: inset 0 0 20px #429439;
+    color: #ffffff;
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.textbox:hover  {
+    border: 2px solid #d6e13d;
+}
+
+.textbox:focus {
+    box-shadow: inset 0 0 20px #b5d78b;
+}
+::-webkit-input-placeholder { /* Chrome */
+    color: #d6e13d;
+}

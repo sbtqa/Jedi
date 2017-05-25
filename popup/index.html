@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jedi QA</title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="js/core-common-functions.js"></script>
+    <script type="text/javascript" src="js/core-events-action.js"></script>
+    <script type="text/javascript" src="js/core-events.js"></script>
+    <script type="text/javascript" src="js/core-on-content-loaded.js"></script>
+    <script type="text/javascript" src="js/core-procedural-ui.js"></script>
+    <link href="css/toggle.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/file.css" rel="stylesheet" type="text/css"/>
+    <link href="css/fields.css" rel="stylesheet" type="text/css"/>
+</head>
+<body style="width: 600px;">
+<div class="panel-top">
+    <table width="100%" style="vertical-align: middle">
+        <tr>
+            <td style="padding-left: 20px" width="40%">
+                <b class="title"> Jedi QA</b>
+            </td>
+            <td align="right" width="60%">
+                <table>
+                    <tr>
+                        <td style="padding-right: 10px">
+                            <b style="color: #ffffff; font-size: 20px;">Highlight elements</b>
+                        </td>
+                        <td>
+                            <label class="switch">
+                                <input id="highlight-toggle" type="checkbox">
+                                <div class="slider round"/>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="small-line"></div>
+<div class="content-holder" align="center">
+    <div id="button-holder">
+        <div class="button left-rounded-corners">Browse...<input id="submit-disk" type="submit"/></div>
+        <div class="button right-rounded-corners">Saved<input id="submit-cookie" type="submit"/></div>
+    </div>
+    <div id="properties-holder" class="variables">
+        <div id="variables-content">
+            <div id="static-fields-holder" style="margin-bottom: 7px">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-bottom">
+    <div style="vertical-align: center; horiz-align: left; padding-left: 20px; padding-top: 10px; height: 100%; width: 100%">
+        <span id="bottom-label" style="font-size: 20px; color: #FFFFFF">© 2017 Сбербанк-Технологии</span>
+    </div>
+</div>
+</body>
+</html>
