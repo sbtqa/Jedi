@@ -26,4 +26,4 @@ After this action will suggest some queries (or 1) into the 'Variable' side bar.
 Then just fill fields for this variable.
 
 #### Step 3
-The last step is creation of the code listing. For it go to the 'Jedi QA' DevTools tab and press on 'Code'. Then just select the code pattern and click on 'Generate' button.
+The last step is creation of the code listing. Go to the 'Jedi QA' DevTools tab and press on 'Code'. Then just select the code pattern and click on 'Generate' button.
