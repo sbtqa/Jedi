@@ -11,17 +11,17 @@
 ### Getting started with Jedi QA
 #### Step 1
 After of installation you can see sith lightsabers into the extensions bar, press on this icon. After opened of a extension popup You can load your pattern by pressing on *Browse...*. In next time, in order to load the same pattern just press on *Saved*.
-<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-01.png" /></p>
+<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-01.png"/></p>
 Then fill this fields accordance with your web-page.
 
 #### Step 2
 In step 2 need to create variables for the page object. In order to do it open DevTools (F12 or Ctrl + Shift + I) and go to the 'Elements' tab. Into this tab press on the 'Variable' side bar where you can create variables. Use DOM-tree or instrument (Ctrl + Shift + C) to select some node. 
 
-<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-02.png" /></p>
+<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-02.png"/></p>
 
 After this action will suggest some queries (or 1) into the 'Variable' side bar. Select one of them and press on the next-arrow.
 
-<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-03.png" /></p>
+<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-03.png"/></p>
 
 Then just fill fields for this variable.
 
