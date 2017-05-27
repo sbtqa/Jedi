@@ -2,7 +2,7 @@
 //$ nameApp - name of an approach.
 //$ nameStrategy - name of a strategy.
 //$ At the end of the declaration return 
-//$ an array of strategies. Exmpl: [s1, s2, s3]
+//$ an array of strategies. Exmpl: [approach1, [approach1-1, approach2-2, approach2-3], approach3]
 
 var idApp = new XApproach('id'),
 hrefApp = new XApproach('href'),
