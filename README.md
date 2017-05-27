@@ -10,7 +10,7 @@
 
 ### Getting started with Jedi QA
 #### Step 1
-After installation you will see sith lightsabers in the extensions bar, click on this icon. After opening the extension popup You can load your pattern by clicking *Browse....* Next time, in order to load the same pattern just click *Saved*.
+After installation you will see sith lightsabers in the extensions bar, click on this icon. After opening the extension popup You can load your pattern by clicking *Browse...*. Next time, in order to load the same pattern just click *Saved*.
 <p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-01.png"/></p>
 Then fill in these fields in accordance with your web-page.
 
