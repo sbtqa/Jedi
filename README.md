@@ -26,4 +26,4 @@ After this action, the extention will suggest some queries (or 1) in the 'Variab
 Then just fill in the fields for this variable.
 
 #### Step 3
-The last step is creating the code listing. Go to the 'Jedi QA' DevTools tab and click on the 'Code' menu item. Then just select the code pattern and click on the 'Generate' button.
+The last step is creating the code listing. Go to the 'Jedi QA' DevTools tab and click on the 'Update' button <img src="https://github.com/cyberspaceru/Jedi/blob/master/devtools/tab/img/update.png" height="18"> in the left corner of the menu. Then go to the 'Code' menu item and just select the code pattern and click on the 'Generate' button.
