@@ -23,7 +23,7 @@ After this action, the extention will suggest some queries (or 1) in the 'Variab
 
 <p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-03.png"/></p>
 
-Then just fill in the fields for this variable.
+Then just fill in the fields for this variable and click on the 'Ok' button in the top panel.
 
 #### Step 3
 The last step is creating the code listing. Go to the 'Jedi QA' DevTools tab and click on the 'Update' button <img src="https://github.com/cyberspaceru/Jedi/blob/master/devtools/tab/img/update.png" height="18"> in the left corner of the menu. Then go to the 'Code' menu item and just select the code pattern and click on the 'Generate' button.
