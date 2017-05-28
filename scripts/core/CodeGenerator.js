@@ -36,7 +36,7 @@ CodeGenerator.generate = function (byName) {
             break;
         }
     if (pattern === undefined)
-        return "Шаблон не найден!";
+        return "Pattern not found!";
     var text = pattern.text;
     var index = 0;
     while ((index = text.indexOf('#startsection')) !== -1) {
