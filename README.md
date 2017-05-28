@@ -19,7 +19,7 @@ In step 2, you need to create variables for the page object. In order to do it :
 
 <p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-02.png"/></p>
 
-After this action, the extention will suggest some queries (or 1) in the 'Variable' side bar. Select one of them and click on the next-arrow.
+After this action, the extension will suggest some queries (or 1) in the 'Variable' side bar. Select one of them and click on the next-arrow.
 
 <p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-03.png"/></p>
 
