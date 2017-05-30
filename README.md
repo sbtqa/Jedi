@@ -1,5 +1,5 @@
 ## Jedi QA v0.1-ALPHA
-**Jedi QA** - is Google Chrome Extension for Automated UI Web Testing. This tool can create a Page Object by some pattern or just suggest XPath queries by the сonfigurable set of strategies.
+**Jedi QA** - is a Google Chrome Extension for Automated UI Web Testing. This tool can create a Page Object by some pattern or just suggest XPath queries by the сonfigurable set of strategies.
 
 #### How to install
 1. Download it as a zip archive and unzip into the folder.
@@ -11,7 +11,7 @@
 ### Getting started with Jedi QA
 #### Step 1
 After installation you will see sith lightsabers in the extensions bar, click on this icon. After opening the extension popup You can load your pattern by clicking *Browse...*. Next time, in order to load the same pattern just click *Saved*.
-<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/imgs/root-readme-01.png"/></p>
+<p align="center"><img src ="https://github.com/cyberspaceru/Jedi/blob/master/wiki/imgs/popup.png"/></p>
 Then fill in these fields in accordance with your web-page.
 
 #### Step 2
