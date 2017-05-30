@@ -16,8 +16,8 @@ XApproaches.any.localName = function (element, approach) {
 };
 
 XApproaches.any.position = function (element, approach) {
-	if (element.parentNode === undefined)
-		return;
+    if (element.parentNode === undefined)
+        return;
     var index = -1;
     var children = element.parentNode.children;
     for (var i = 0; i < children.length; i++) {
@@ -33,34 +33,19 @@ XApproaches.any.position = function (element, approach) {
 };
 
 XApproaches.ancestor = function (element, approach) {
-  var ancestors = getAncestors(element);
-  var approaches = approach.args.approaches;
-  if (approaches === undefined)
-      return [null];
-  var best = bestExpression(ancestors, approaches);
-  if (best.element === null)
-      return [null];
-  return [XFunction.ancestor(best.element.tagName, best.expression)];
+    var ancestors = getAncestors(element);
+    var approaches = approach.args.approaches;
+    if (approaches === undefined)
+        return [null];
+    return applyApproaches(ancestors, approaches, 'ancestor');
 };
 
 XApproaches.followingSibling = function (element, approach) {
-  var followings = getFollowingSibling(element);
-  var approaches = approach.args.approaches;
-  if (approaches === undefined)
-      return [null];
-  var result = [];
-  var strategy = new XStrategy('meta', approaches);
-  for (var i = 0; i < followings.length; i++) {
-	  var object = new XObject(followings[i]);
-	  if (object.validate()) {
-		  var route = new XRoute(followings[i]);
-          route.add(object);
-		  if (object.applyStrategy(strategy.copy(), route)) {
-			  result.push(XFunction.followingSibling(object));
-		  }
-	  }
-  }
-  return result;
+    var followingSiblings = getFollowingSibling(element);
+    var approaches = approach.args.approaches;
+    if (approaches === undefined)
+        return [null];
+    return applyApproaches(followingSiblings, approaches, 'followingSibling');
 };
 
 XApproaches.empty = function (element, approach) {
@@ -72,10 +57,7 @@ XApproaches.child = function (element, approach) {
     var approaches = approach.args.approaches;
     if (approaches === undefined)
         return [null];
-    var best = bestExpression(child, approaches);
-    if (best.element === null)
-        return [null];
-    return [XFunction.child(best.element.tagName, best.expression)];
+    return applyApproaches(child, approaches, 'child');
 };
 
 XApproaches.indexator = function (element) {

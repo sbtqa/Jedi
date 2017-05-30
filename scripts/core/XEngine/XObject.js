@@ -1,40 +1,18 @@
-/**
- * Created by cyber-PC on 14.04.2017.
- */
 var XObject = function (element) {
     this.element = element;
     this.best = undefined;
 };
 
-XObject.prototype.generate = function () {
-    var cursor = this, validated;
-    var route = new XRoute(this.element);
-    var all = [];
-    while (validated = cursor.validate()) {
-        if (XObject.cycle(route, cursor)) {
-            all = route.compileAll();
-            if (all.length !== 0)
-                break;
-            cursor = cursor.root;
-        } else break;
-    }
-    if (all.length > 0) {
-        //console.log("all", all);
-        return all;
-    }
-    console.log("Не смог найти XPath", route.compile());
-    return undefined;
-};
-
 /**
- * Цикл обработки элемента пути.
+ * The cycle of the handling process of the query creating.
  * @param route {XRoute}
  * @param cursor {XObject}
  */
 XObject.cycle = function (route, cursor) {
     try {
         route.add(cursor);
-        var set = XProperties.strategiesSet.copy();
+        var set = XProperties.getSetByTag(cursor.getTag()).copy();
+
         for (var i = 0; i < set.length(); i++)
             cursor.applyStrategy(set.get(i), route);
         cursor.best = getBestStrategy(cursor, set.strategies, route);
@@ -48,8 +26,31 @@ XObject.cycle = function (route, cursor) {
     return false;
 };
 
+/*
+ * Start a first cycle of the handling process.
+ * This.element will be target of the query.
+ */
+XObject.prototype.generate = function () {
+    var cursor = this, validated;
+    var route = new XRoute(this.element);
+    var all = [];
+    while (validated = cursor.validate()) {
+        if (XObject.cycle(route, cursor)) {
+            all = route.compileAll();
+            if (all.length !== 0)
+                break;
+            cursor = cursor.root;
+        } else break;
+    }
+    if (all.length > 0) {
+        return all;
+    }
+    console.log("Can't found a XPath query", route.compile());
+    return undefined;
+};
+
 /**
- * Применяет стратегию к текущему состоянию пути, может ли она быть применена.
+ * Apply strategy to current state of the route by this XObject.
  * @param strategy {XStrategy}
  * @param route {XRoute}
  */
@@ -65,13 +66,13 @@ XObject.prototype.applyStrategy = function (strategy, route) {
     var count = route.count();
     if (validated && count > 0) {
         strategy.count = count;
-		return true;
-	}
-	return false;
+        return true;
+    }
+    return false;
 };
 
 /**
- * Имеет ли смысл продолжать создавать запрос далее?
+ * Is possible to create the query?
  * @returns {boolean}
  */
 XObject.prototype.validate = function () {
@@ -83,6 +84,9 @@ XObject.prototype.validate = function () {
     return true;
 };
 
+/**
+ * Get a tag of the element.
+ */
 XObject.prototype.getTag = function () {
     if (this.element instanceof Text)
         return "text()";
@@ -92,6 +96,6 @@ XObject.prototype.getTag = function () {
 XObject.prototype.toString = function () {
     var expression = this.expression;
     if (!expression.isEmpty()) {
-        return (expression.tagAsAnyElement() ? '*' : this.getTag()) + expression.toString();
+        return (expression.taggedAsAnyElement() ? '*' : this.getTag()) + expression.toString();
     } else return this.getTag();
 };

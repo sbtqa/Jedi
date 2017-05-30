@@ -47,23 +47,20 @@ function getFollowingSibling(element) {
 	return result;
 }
 
-function bestExpression(elements, approaches) {
-    var pCount = undefined, bestExpression = null, element = null;
+function applyApproaches(elements, approaches, functionName) {
+    var strategy = new XStrategy('meta', approaches);
+    var result = [];
     for (var i = 0; i < elements.length; i++) {
-        var expression = new XExpression();
-        var a = elements[i];
-        for (var j = 0; j < approaches.length; j++)
-            expression.addParamByApproach(a, approaches[j].copy());
-        if (!expression.isEmpty()) {
-            var count = getElementByXpath("*//" + a.tagName + expression.toString()).length;
-            if (pCount === undefined || pCount > count) {
-                bestExpression = expression;
-                element = elements[i];
-                pCount = count;
+        var object = new XObject(elements[i]);
+        if (object.validate()) {
+            var route = new XRoute(elements[i]);
+            route.add(object);
+            if (object.applyStrategy(strategy.copy(), route)) {
+                result.push(XFunction[functionName](object));
             }
         }
     }
-    return {element: element, expression: bestExpression};
+    return result;
 }
 
 function getAncestors(element) {
