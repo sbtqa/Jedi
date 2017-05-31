@@ -11,7 +11,7 @@ var XObject = function (element) {
 XObject.cycle = function (route, cursor) {
     try {
         route.add(cursor);
-        var set = XProperties.getSetByTag(cursor.getTag()).copy();
+        var set = XSettings.getSetByTag(cursor.getTag()).copy();
 
         for (var i = 0; i < set.length(); i++)
             cursor.applyStrategy(set.get(i), route);

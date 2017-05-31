@@ -1,5 +1,5 @@
 var getXPath = function (element) {
-    if (XProperties.strategiesSet !== undefined) {
+    if (XSettings.strategiesSet !== undefined) {
         var domObject = new XObject(element);
         return {tagName: element.tagName, paths: domObject.generate()};
     } else return undefined;
@@ -32,7 +32,7 @@ function generateCode(byName) {
 }
 
 var setupXEngine = function (code) {
-    XProperties.setup(code);
+    XSettings.setup(code);
 };
 
 function sendMessageToPopup(message) {
