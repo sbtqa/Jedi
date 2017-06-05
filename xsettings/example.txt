@@ -1,37 +1,33 @@
 var idApp = new XApproach('id'),
-hrefApp = new XApproach('href'),
-localNameApp = new XApproach('localName'),
-classApp = new XApproach('class'),
-titleApp = new XApproach('title'),
-valueApp = new XApproach('value'),
-indexatorApp = new XApproach('indexator'),
-placeholderApp = new XApproach('placeholder'),
-innerTextApp = new XApproach('innerText');
+    hrefApp = new XApproach('href'),
+    localNameApp = new XApproach('localName'),
+    classApp = new XApproach('class'),
+    titleApp = new XApproach('title'),
+    valueApp = new XApproach('value'),
+    indexatorApp = new XApproach('indexator'),
+    placeholderApp = new XApproach('placeholder'),
+    innerTextApp = new XApproach('innerText');
 
-var approaches = [idApp, valueApp];
-
+var approaches = [idApp, valueApp, innerTextApp];
 var ancestorApp = new XApproach('ancestor', {approaches: approaches});
 var followingSiblingApp = new XApproach('followingSibling', {approaches: approaches});
 var childApp = new XApproach('child', {approaches: approaches});
 
 var common = [[idApp, valueApp, titleApp],
-idApp,
-followingSiblingApp,
- childApp,
-hrefApp,
-classApp,
-innerTextApp,
-ancestorApp,
-titleApp,
-placeholderApp,
-indexatorApp,
-[localNameApp, idApp, titleApp, valueApp]];
-
-var a = [hrefApp, idApp, titleApp];
+    idApp,
+    followingSiblingApp,
+    childApp,
+    hrefApp,
+    classApp,
+    innerTextApp,
+    ancestorApp,
+    titleApp,
+    placeholderApp,
+    indexatorApp,
+    [localNameApp, idApp, titleApp, valueApp]];
 
 var setting = {
-	common: common,
-	a: a,
-  	post: {}
+    common: common,
+    post: {}
 };
 setting;
