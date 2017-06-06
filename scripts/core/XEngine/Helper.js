@@ -16,6 +16,25 @@ $.fn.xpathEvaluate = function (xpathExpression) {
     }
 };
 
+function bestExpression(elements, approaches) {
+    var pCount = undefined, bestExpression = null, element = null;
+    for (var i = 0; i < elements.length; i++) {
+        var expression = new XExpression();
+        var a = elements[i];
+        for (var j = 0; j < approaches.length; j++)
+            expression.addParamByApproach(a, approaches[j].copy());
+        if (!expression.isEmpty()) {
+            var count = getElementByXpath("*//" + a.tagName + expression.toString()).length;
+            if (pCount === undefined || pCount > count) {
+                bestExpression = expression;
+                element = elements[i];
+                pCount = count;
+            }
+        }
+    }
+    return {element: element, expression: bestExpression};
+}
+
 /**
 * Делает для примера, из массива [2, 3] -> [1, 1], [1, 2], [1, 3], [2, 1], [2, 2], [2, 3].
 */
