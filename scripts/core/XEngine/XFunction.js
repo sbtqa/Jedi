@@ -30,12 +30,12 @@ XFunction.position = function () {
     return new XFunction(XFunction.TYPES.POSITION);
 };
 
-XFunction.ancestor = function (query) {
-    return new XFunction(XFunction.TYPES.ANCESTOR, [query]);
+XFunction.ancestor = function (tagName, query) {
+    return new XFunction(XFunction.TYPES.ANCESTOR, [tagName, query]);
 };
 
-XFunction.child = function (query) {
-    return new XFunction(XFunction.TYPES.CHILD, [query]);
+XFunction.child = function (tagName, query) {
+    return new XFunction(XFunction.TYPES.CHILD, [tagName, query]);
 };
 
 XFunction.localName = function () {
@@ -48,7 +48,7 @@ XFunction.TYPES = {
     LOCAL_NAME: {number: 0, value: "local-name()"},
     AS_ATTRIBUTE: {number: 1, value: "@{0}"},
     IN_QUOTES: {number: 1, value: "'{0}'"},
-    ANCESTOR: {number: 1, value: "ancestor::{0}"},
-    CHILD: {number: 1, value: "child::{0}"},
+    ANCESTOR: {number: 2, value: "ancestor::{0}{1}"},
+    CHILD: {number: 2, value: "child::{0}{1}"},
     FOLLOWING_SIBLING: {number: 1, value: "following-sibling::{0}"}
 };
