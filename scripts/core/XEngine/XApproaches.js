@@ -33,11 +33,14 @@ XApproaches.any.position = function (element, approach) {
 };
 
 XApproaches.ancestor = function (element, approach) {
-    var ancestors = getAncestors(element);
-    var approaches = approach.args.approaches;
-    if (approaches === undefined)
-        return [null];
-    return applyApproaches(ancestors, approaches, 'ancestor');
+  var ancestors = getAncestors(element);
+  var approaches = approach.args.approaches;
+  if (approaches === undefined)
+      return [null];
+  var best = bestExpression(ancestors, approaches);
+  if (best.element === null)
+      return [null];
+  return [XFunction.ancestor(best.element.tagName, best.expression)];
 };
 
 XApproaches.followingSibling = function (element, approach) {
@@ -57,7 +60,10 @@ XApproaches.child = function (element, approach) {
     var approaches = approach.args.approaches;
     if (approaches === undefined)
         return [null];
-    return applyApproaches(child, approaches, 'child');
+    var best = bestExpression(child, approaches);
+    if (best.element === null)
+        return [null];
+    return [XFunction.child(best.element.tagName, best.expression)];
 };
 
 XApproaches.indexator = function (element) {
