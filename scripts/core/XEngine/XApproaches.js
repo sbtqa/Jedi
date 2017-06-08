@@ -81,11 +81,22 @@ XApproaches.indexator = function (element) {
     return [null];
 };
 
+XApproaches.innerHTML = function (element, approach) {
+    if (element.childElementCount > 1 || element.innerHTML === undefined || element.innerHTML === '')
+        return [null];
+     if (approach.args !== undefined && approach.args.strategy === 'equals')
+        return [XParam.equals(XFunction.node(), XFunction.inQuotes(element.innerHTML))];
+     else return [XParam.contains(XFunction.node(), XFunction.inQuotes(element.innerHTML.trim()))];
+};
+
 XApproaches.innerText = function (element, approach) {
     if (element.childElementCount > 1 || element.innerText === undefined || element.innerText === '')
         return [null];
-    return [XParam.contains(XFunction.text(), XFunction.inQuotes(element.innerText.trim()))];
+    if (approach.args !== undefined && approach.args.strategy === 'equals')
+        return [XParam.equals(XFunction.text(), XFunction.inQuotes(element.innerText))];
+    else return [XParam.contains(XFunction.text(), XFunction.inQuotes(element.innerText.trim()))];
 };
+
 
 XApproaches.text.empty = function (element, approach) {
     return [XParam.empty()];
