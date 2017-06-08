@@ -82,7 +82,7 @@ XApproaches.indexator = function (element) {
 };
 
 XApproaches.innerText = function (element, approach) {
-    if (element.childElementCount !== 0 || element.innerText === undefined || element.innerText === '')
+    if (element.childElementCount > 1 || element.innerText === undefined || element.innerText === '')
         return [null];
     return [XParam.contains(XFunction.text(), XFunction.inQuotes(element.innerText.trim()))];
 };
