@@ -1,0 +1,31 @@
+{
+  "static_fields": [
+    "Page title",
+    "Author"
+  ],
+
+  "table_columns": [
+    "Element title:target:",
+    "Type:select:['Button', 'Select', 'InputText', 'Link']",
+	"Element name"
+  ]
+}
+
+$code
+{
+$declaration {name: 'BDD Java', type: 'java'}
+$pattern
+{
+@Author("$eval(static['Author'])")
+public class $eval(static['Page title']) {
+	
+	#startsection
+	@FindBy(xpath = "$eval(row['xpath'].replace(/"/g, '\\"'))")
+	@ElementTitle("$eval(row['Element title'])")
+	public WebElement $eval(row['Type'].toLowerCase().replace(/[aeiou]/gi, '') + row['Element name']);
+	
+	#endsection
+	
+}
+}
+}
