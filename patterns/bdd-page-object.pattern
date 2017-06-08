@@ -15,6 +15,13 @@ $code
 $declaration {name: 'BDD Java', type: 'java'}
 $pattern
 {
+package <YOUR_PACKAGE>;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.FindBy;
+import ru.sbt.qa.bdd.pageFactory.ElementTitle;
+import ru.sbt.qa.bdd.pageFactory.PageEntry;
+
 @PageEntry(title = "$eval(static['Название страницы'])")
 public class $eval(static['Имя класса']) {
 	
