@@ -1,13 +1,12 @@
 {
   "static_fields": [
     "Название страницы",
-    "Автор"
+    "Имя класса"
   ],
 
   "table_columns": [
     "Название элемента:target:",
-    "Тип:select:['Button', 'Select', 'InputText', 'Link']",
-	"Имя переменной"
+    "Имя переменной"
   ]
 }
 
@@ -16,13 +15,13 @@ $code
 $declaration {name: 'BDD Java', type: 'java'}
 $pattern
 {
-@Author("$eval(static['Автор'])")
-public class $eval(static['Название страницы']) {
+@PageEntry(title = "$eval(static['Название страницы'])")
+public class $eval(static['Имя класса']) {
 	
 	#startsection
 	@FindBy(xpath = "$eval(row['xpath'].replace(/"/g, '\\"'))")
 	@ElementTitle("$eval(row['Название элемента'])")
-	public WebElement $eval(row['Тип'].toLowerCase().replace(/[aeiou]/gi, '') + row['Имя переменной']);
+	public WebElement $eval(row['Имя переменной']);
 	
 	#endsection
 
