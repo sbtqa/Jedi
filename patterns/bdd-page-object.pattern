@@ -6,7 +6,7 @@
 
   "table_columns": [
     "Название элемента:target:",
-    "Тип:select:['Button', 'Select', 'InputText', 'Link']"
+    "Имя переменной"
   ]
 }
 
