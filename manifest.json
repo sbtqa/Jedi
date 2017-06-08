@@ -35,7 +35,7 @@
         "scripts/core/XEngine/XExpression.js",
         "scripts/core/XEngine/XObject.js",
         "scripts/core/XEngine/XRoute.js",
-        "scripts/core/XEngine/XProperties.js",
+        "scripts/core/XEngine/XSettings.js",
         "scripts/core/XEngine/XValidator.js",
         "scripts/core/CommonFunction.js",
         "scripts/core/CodeGenerator.js",
