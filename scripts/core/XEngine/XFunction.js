@@ -22,6 +22,10 @@ XFunction.followingSibling = function (value) {
     return new XFunction(XFunction.TYPES.FOLLOWING_SIBLING, [value]);
 };
 
+XFunction.node = function () {
+    return new XFunction(XFunction.TYPES.NODE);
+};
+
 XFunction.text = function () {
     return new XFunction(XFunction.TYPES.TEXT);
 };
@@ -43,6 +47,7 @@ XFunction.localName = function () {
 };
 
 XFunction.TYPES = {
+    NODE: {number: 0, value: "node()"},
     TEXT: {number: 0, value: "text()"},
     POSITION: {number: 0, value: "position()"},
     LOCAL_NAME: {number: 0, value: "local-name()"},
