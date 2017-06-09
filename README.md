@@ -1,6 +1,8 @@
 ## Jedi QA v0.1-ALPHA (For Chrome Version 48 or high)
 **Jedi QA** - is a Google Chrome Extension for Automated UI Web Testing. This tool can create a Page Object by some pattern or just suggest XPath queries by the сonfigurable set of strategies.
 
+[![Jedi QA User's Guide](https://img.youtube.com/vi/t4g8YNalGkA/0.jpg)](https://www.youtube.com/watch?v=t4g8YNalGkA)
+
 #### How to install
 1. Download it as a zip archive and unzip into the folder.
 2. Open *Google Chrome*.
