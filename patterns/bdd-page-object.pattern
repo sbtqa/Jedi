@@ -18,7 +18,7 @@ $pattern
 package <YOUR_PACKAGE>;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.FindBy;
+import org.openqa.selenium.support.FindBy;
 import ru.sbt.qa.bdd.pageFactory.ElementTitle;
 import ru.sbt.qa.bdd.pageFactory.PageEntry;
 
